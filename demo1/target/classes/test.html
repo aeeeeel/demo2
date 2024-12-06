@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${title}"></div>
+
+<div th:if="${eval}">我是判断条件标签</div>
+
+<ul>
+     <li th:each="name, iterStat : ${list}" th:text="${iterStat.index}+'.《'+${name}+'》'"></li>
+</ul>
+</body>
+</html>
